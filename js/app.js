@@ -77,7 +77,6 @@ Player.prototype.update = function(dt) {
             
             
         winMessage.setAttribute("style","visibility: visible; display: inherit;");
-        /*winMessage.setAttribute("style","display: inherit;");*/
         this.x = 200;
         this.y = 380;
         setTimeout(function(){
@@ -114,13 +113,13 @@ Player.prototype.handleInput = function(pressedKey)
 // Now instantiate your objects.
 var allEnemies = [];
 // Place all enemy objects in an array called allEnemies
-var enemyPosition = [60, 140, 220];
+var enemyPositions = [60, 140, 220];
 // Place the player object in a variable called player
 var player = new Player(200, 380, 50);
 var enemy;
 // Position "y" where the enemies will are created
-enemyPosition.forEach(function(posY) {
-    enemy = new Enemy(0, posY, 100 + Math.floor(Math.random() * 512));
+enemyPositions.forEach(function(positionY) {
+    enemy = new Enemy(0, positionY, 100 + Math.floor(Math.random() * 512));
     allEnemies.push(enemy);
 });
 
